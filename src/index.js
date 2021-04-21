@@ -16,6 +16,7 @@ export const setRouter = _setRouter;
 // export api for usages outside Vuejs context
 export const query = api.query;
 export const config = api.config;
+export const nativeConfig = api.nativeConfig;
 export const event = api.event;
 export const pageview = api.pageview;
 export const screenview = api.screenview;

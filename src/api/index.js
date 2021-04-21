@@ -1,5 +1,6 @@
 import query from "./query";
 import config from "./config";
+import nativeConfig from "./native-config";
 import event from "./event";
 import pageview from "./pageview";
 import screenview from "./screenview";
@@ -16,6 +17,7 @@ import optOut from "./opt-out";
 export default {
   query,
   config,
+  nativeConfig,
   event,
   pageview,
   screenview,
