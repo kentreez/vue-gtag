@@ -238,7 +238,7 @@ declare module "vue-gtag" {
    *
    * @see https://developers.google.com/gtagjs/devguide/configure
    */
-  export type GtagNativeConfig = (config?: Gtag.ControlParams | Gtag.EventParams | Gtag.CustomParams) => void;
+  export type GtagNativeConfig = (targetId: string, config?: Gtag.ControlParams | Gtag.EventParams | Gtag.CustomParams) => void;
 
   /**
    * Measure a full refund of a transaction.
