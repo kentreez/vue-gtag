@@ -49,7 +49,10 @@ export default function () {
     return;
   }
 
-  const resource = `${customResourceURL}?id=${config.id}&l=${globalDataLayerName}`;
+  const resource =
+    `${customResourceURL}?` +
+    (config.id ? `id=${config.id}&` : "") +
+    `l=${globalDataLayerName}`;
 
   return loadScript(resource, {
     preconnectOrigin: customPreconnectOrigin,
