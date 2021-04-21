@@ -234,6 +234,13 @@ declare module "vue-gtag" {
   export type GtagConfig = (config?: Gtag.ControlParams | Gtag.EventParams | Gtag.CustomParams) => void;
 
   /**
+   * Initialize and configure settings for a particular product account.
+   *
+   * @see https://developers.google.com/gtagjs/devguide/configure
+   */
+  export type GtagNativeConfig = (config?: Gtag.ControlParams | Gtag.EventParams | Gtag.CustomParams) => void;
+
+  /**
    * Measure a full refund of a transaction.
    *
    * @see https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-ecommerce#measure_refunds
@@ -256,6 +263,7 @@ declare module "vue-gtag" {
     exception: GtagException;
     set: GtagSet;
     config: GtagConfig;
+    nativeConfig: GtagNativeConfig;
     time: GtagTime;
   }
 
@@ -295,6 +303,7 @@ declare module "vue-gtag" {
   export default VueGtagPlugin;
   export const query: Gtag.Gtag;
   export const config: GtagConfig;
+  export const nativeConfig: GtagNativeConfig;
   export const event: GtagEvent;
   export const pageview: GtagPageView;
   export const screenview: GtagScreenView;
